@@ -56,7 +56,7 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Products</h2>
-        <ul>
+        <ul className='product-ul'>
           {this.state.products.map((product) => {
             return (
               <li key={product.id} className='product-li'>
