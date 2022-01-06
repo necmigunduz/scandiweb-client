@@ -5,6 +5,17 @@
 .product-li {
   list-style-type: none;
   padding: 20px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(68, 63, 63);
+  border-radius: 10px;
+  background-color: rgb(238, 238, 232);
+}
+
+.product-li span {
+  padding-bottom: 20px;
+  font-weight: 600;
 }
 
 .product-ul {

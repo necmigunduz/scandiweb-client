@@ -60,7 +60,7 @@ class App extends Component {
           {this.state.products.map((product) => {
             return (
               <li key={product.id} className='product-li'>
-                <div>{product.name}</div>
+                <span>{product.name}</span>
                 <img src={product.gallery[0]} alt='products' width={"200px"}/>
               </li>
             )
