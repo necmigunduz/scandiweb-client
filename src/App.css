@@ -4,18 +4,25 @@
 
 .product-li {
   list-style-type: none;
-  padding: 20px;
+  padding: 10px;
   margin: 5px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(68, 63, 63);
-  border-radius: 10px;
-  background-color: rgb(238, 238, 232);
+  border: 1px solid lightblue;
+  border-radius: 2px;
+  background-color: lightblue;
+  width: 100px;
+}
+
+.product-li:hover {
+  /* width: 150px; */
+  background-color: lightsalmon;
 }
 
 .product-li span {
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   font-weight: 600;
+  font-size: 12px;
 }
 
 .product-ul {

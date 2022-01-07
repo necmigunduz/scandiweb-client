@@ -1,35 +1,7 @@
 import './App.css';
 import React, { Component } from 'react'
+import { PRODUCTS_QUERY } from './query'
 
-const PRODUCTS_QUERY = `{
-	categories {
-    products {
-      id
-      name
-      brand
-      description
-      inStock
-      gallery
-      prices {
-        amount
-        currency {
-          label
-          symbol
-        }
-      }
-      attributes {
-        id
-        name
-        type
-        items {
-          id
-          value
-          displayValue
-        }
-      }
-    }
-  }
-}`
 
 class App extends Component {
   constructor(props) {
@@ -61,7 +33,7 @@ class App extends Component {
             return (
               <li key={product.id} className='product-li'>
                 <span>{product.name}</span>
-                <img src={product.gallery[0]} alt='products' width={"200px"}/>
+                <img src={product.gallery[0]} alt='products'/>
               </li>
             )
           })}
