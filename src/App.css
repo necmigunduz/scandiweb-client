@@ -1,5 +1,20 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-list {
+  margin: 40px;
+}
+
+a {
+  text-decoration:none;
+}
+
+a:hover {
+  border-bottom: 1px blue solid;
 }
 
 .product-li {
@@ -15,12 +30,11 @@
 }
 
 .product-li:hover {
-  /* width: 150px; */
   background-color: lightsalmon;
 }
 
 .product-li span {
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   font-weight: 600;
   font-size: 12px;
 }
@@ -28,4 +42,20 @@
 .product-ul {
   display: flex;
   flex-wrap: wrap;
+}
+
+.top-nav {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.top-links {
+  padding: 3px;
+  font-size: 15px;
+}
+
+.category-name {
+  text-align: start;
+  margin: 0 45px;
 }
