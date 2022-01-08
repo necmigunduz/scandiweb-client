@@ -5,11 +5,11 @@ class TopNav extends Component {
     render() {
         return (
             <div className='top-nav'>
-                <div>
-                    <a href="#" className='top-links'>WOMEN</a>
-                    <a href="#" className='top-links'>MEN</a>
-                    <a href="#" className='top-links'>KIDS</a>
-                </div>
+                <nav>
+                    <a href="#" className='top-links'><small>WOMEN</small></a>
+                    <a href="#" className='top-links'><small>MEN</small></a>
+                    <a href="#" className='top-links'><small>KIDS</small></a>
+                </nav>
                 <div>
                 <img src={Logo} alt="Logo" width="150px"/>
                 </div>
@@ -20,6 +20,7 @@ class TopNav extends Component {
                         <option value="GBP">£</option>
                         <option value="AUD"> A$</option>
                         <option value="RUB">₽</option>
+                        <option value="JPY">¥</option>
                     </select>
                 </div>
             </div>

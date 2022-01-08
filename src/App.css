@@ -59,3 +59,7 @@ a:hover {
   text-align: start;
   margin: 0 45px;
 }
+
+nav {
+  display: block;
+}
