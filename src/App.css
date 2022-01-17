@@ -46,8 +46,10 @@ a:hover {
 
 .top-nav {
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: center;
+  padding: 0 25px;
+  margin: 0;
 }
 
 .top-links {
@@ -62,4 +64,14 @@ a:hover {
 
 nav {
   display: block;
+}
+
+nav a:checked {
+  color: red;
+  text-decoration:underline;
+}
+
+.nav-menu-ul {
+  display: flex;
+  list-style-type: none;
 }

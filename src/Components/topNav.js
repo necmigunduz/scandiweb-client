@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import Logo from '../Assets/logo.png'
+import { Link } from "react-router-dom";
 
 class TopNav extends Component {
     render() {
         return (
             <div className='top-nav'>
-                <nav>
-                    <a href="#" className='top-links'><small>WOMEN</small></a>
-                    <a href="#" className='top-links'><small>MEN</small></a>
-                    <a href="#" className='top-links'><small>KIDS</small></a>
+                <nav className='nav-menu'>
+                    <ul className='nav-menu-ul'>
+                        <li><Link to="/clothes" className='top-links'><small>CLOTHES</small></a></li>
+                        <li><Link to="/tect-pproducts" className='top-links'><small>TECH-PRODUCTS</small></a></li>
+                    </ul>                    
                 </nav>
                 <div>
                 <img src={Logo} alt="Logo" width="150px"/>
