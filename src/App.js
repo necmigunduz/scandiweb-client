@@ -12,7 +12,7 @@ class App extends Component {
         <TopNav />
         <Routes>
           <Route path="/productList" element={<ProductList />} />
-          <Route path="/  " element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     );
