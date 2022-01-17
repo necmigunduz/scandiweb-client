@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import TopNav from "./Components/topNav";
 import ClothesList from "./Components/clothesList";
 import TechProductsList from "./Components/techProductsList";
-import Home from "./Components/Home";
+import AllProductsList from "./Components/allProductsList";
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
       <div className="App">
         <TopNav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<AllProductsList />} />
           <Route path="/clothesList" element={<ClothesList />} />
           <Route path="/techProductsList" element={<TechProductsList />} />
         </Routes>

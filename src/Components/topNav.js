@@ -8,7 +8,7 @@ class TopNav extends Component {
       <div className="top-nav">
         <nav>
           <Link to="/" className="top-links">
-            Home
+            All-Products
           </Link>
           <Link to="/clothesList" className="top-links">
             Clothes

@@ -18,7 +18,7 @@ class ClothesList extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.data.categories[1].products)
-        this.setState({ products: data.data.categories[0].products });
+        this.setState({ products: data.data.categories[1].products });
       })
       .catch((error) => console.log(error.message));
   }
