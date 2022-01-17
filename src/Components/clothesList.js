@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
 
-class ProductList extends Component {
+class ClothesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +17,7 @@ class ProductList extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.data.categories[0].products)
+        console.log(data.data.categories[1].products)
         this.setState({ products: data.data.categories[0].products });
       })
       .catch((error) => console.log(error.message));
@@ -26,7 +26,7 @@ class ProductList extends Component {
   render() {
     return (
       <div className="product-list">
-        <h2 className="category-name">Products</h2>
+        <h2 className="category-name">Clothes</h2>
         <ul className="product-ul">
           {this.state.products.map((product) => {
             return (
@@ -42,4 +42,4 @@ class ProductList extends Component {
     );
   }
 }
- export default ProductList
+ export default ClothesList
