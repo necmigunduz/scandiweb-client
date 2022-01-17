@@ -11,14 +11,14 @@ class App extends Component {
         <div className="App">
           <TopNav />
           <Switch>
-            <Route>
+            <Route path="/" >
               <Home />
             </Route>
             <Route>
-              <Clothes />
+              <Clothes path="/clothes" />
             </Route>
             <Route>
-              <TechProducts />
+              <TechProducts path="tech-products" />
             </Route>
           </Switch>
         </div>
