@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
+import ListItem from "./listItem";
 
 export default class AllProductsList extends Component {
   constructor(props) {
@@ -34,11 +35,13 @@ export default class AllProductsList extends Component {
           <ul className="product-ul">
             {this.state.products.map((product) => {
               return (
-                <li key={product.id} className="product-li">
-                  <img src={product.gallery[0]} alt="products" />
-                  <span>{product.name}</span>
-                  <span>{product.brand}</span>
-                </li>
+                <ListItem
+                  key={product.id}
+                  pImg={product.gallery[0]}
+                  pName={product.name}
+                  pBrand={product.brand}
+                  pPrice={product.prices[0].amount}
+                />
               );
             })}
           </ul>

@@ -63,3 +63,16 @@ a:hover {
 nav {
   display: block;
 }
+
+select {
+  width: 150px;
+  height: 30px;
+  border: none;
+  background-color: white;
+}
+
+option {
+  text-align: center;
+  border: none;
+  background-color: white;
+}

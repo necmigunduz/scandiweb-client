@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
+import ListItem from "./listItem";
 
 class TechProductsList extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class TechProductsList extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.data.categories[2].products)
+        console.log(data.data.categories[2].products);
         this.setState({ products: data.data.categories[2].products });
       })
       .catch((error) => console.log(error.message));
@@ -30,11 +31,13 @@ class TechProductsList extends Component {
         <ul className="product-ul">
           {this.state.products.map((product) => {
             return (
-              <li key={product.id} className="product-li">
-                <img src={product.gallery[0]} alt="products" />
-                <span>{product.name}</span>
-                <span>{product.brand}</span>
-              </li>
+              <ListItem
+                key={product.id}
+                pImg={product.gallery[0]}
+                pName={product.name}
+                pBrand={product.brand}
+                pPrice={product.prices[0].amount}
+              />
             );
           })}
         </ul>
@@ -42,4 +45,4 @@ class TechProductsList extends Component {
     );
   }
 }
- export default TechProductsList
+export default TechProductsList;
