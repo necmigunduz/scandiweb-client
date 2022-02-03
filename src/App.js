@@ -7,10 +7,19 @@ import TechProductsList from "./Components/techProductsList";
 import AllProductsList from "./Components/allProductsList";
 
 class App extends Component {
+  state = { selectedCurrency : '' };
+
+  getDataFromTopNav = (SC) => {
+    this.setState({
+      selectedCurrency: SC
+    })
+  };
+
   render() {
     return (
       <div className="App">
-        <TopNav />
+        <TopNav sendSCToApp={this.getDataFromTopNav} />
+        <p>{this.state.selectedCurrency}</p>
         <Routes>
           <Route path="/" element={<AllProductsList />} />
           <Route path="/clothesList" element={<ClothesList />} />

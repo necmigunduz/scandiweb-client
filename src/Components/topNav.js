@@ -25,6 +25,7 @@ class TopNav extends Component {
     let sC = await e.target.value
     this.setState({selectedCurrency: sC});
     console.log(this.state.selectedCurrency)
+    this.props.sendSCToApp(this.state.selectedCurrency);
   }
   render() {
     return (
