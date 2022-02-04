@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
-import ListItem from "./listItem";
+import ListItem from "./ListItem/listItem";
 import SelectCurrency from "./currencySelector/currencySelector";
 
 export default class AllProductsList extends Component {
