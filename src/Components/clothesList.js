@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
-import ListItem from "./ListItem/listItem";
+import ListItem from "./listItem/listItem";
 import SelectCurrency from "./currencySelector/currencySelector";
 
 class ClothesList extends Component {
