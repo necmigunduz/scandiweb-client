@@ -19,11 +19,10 @@ class App extends Component {
     return (
       <div className="App">
         <TopNav sendSCToApp={this.getDataFromTopNav} />
-        {/* <p>{this.state.selectedCurrency}</p> */}
         <Routes>
           <Route path="/" element={<AllProductsList dataFromParent={this.state.selectedCurrency} />} />
-          <Route path="/clothesList" element={<ClothesList dataFromParent={this.state.selectedCurrency} />} />
-          <Route path="/techProductsList" element={<TechProductsList dataFromParent={this.state.selectedCurrency} />} />
+          <Route path="/clothes" element={<ClothesList dataFromParent={this.state.selectedCurrency} />} />
+          <Route path="/techProducts" element={<TechProductsList dataFromParent={this.state.selectedCurrency} />} />
         </Routes>
       </div>
     );

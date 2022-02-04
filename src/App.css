@@ -23,9 +23,9 @@ a:hover {
   margin: 5px;
   display: flex;
   flex-direction: column;
-  border: 1px solid lightblue;
+  border: 1px solid rgb(216, 230, 235);
   border-radius: 2px;
-  background-color: lightblue;
+  background-color: rgb(221, 236, 241);
   width: 100px;
 }
 
@@ -35,7 +35,7 @@ a:hover {
 
 .product-li span {
   padding-bottom: 3px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 12px;
 }
 
@@ -75,4 +75,18 @@ option {
   text-align: center;
   border: none;
   background-color: white;
+}
+
+/* CSS Library */
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.p-10 {
+  padding: 5px;
 }

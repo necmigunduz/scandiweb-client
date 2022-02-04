@@ -25,10 +25,10 @@ class TopNav extends Component {
           <Link to="/" className="top-links">
             All-Products
           </Link>
-          <Link to="/clothesList" className="top-links">
+          <Link to="/clothes" className="top-links">
             Clothes
           </Link>
-          <Link to="/techProductsList" className="top-links">
+          <Link to="/techProducts" className="top-links">
             Tech-Products
           </Link>
         </nav>
