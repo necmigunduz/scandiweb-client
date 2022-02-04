@@ -22,8 +22,8 @@ class App extends Component {
         {/* <p>{this.state.selectedCurrency}</p> */}
         <Routes>
           <Route path="/" element={<AllProductsList dataFromParent={this.state.selectedCurrency} />} />
-          <Route path="/clothesList" element={<ClothesList />} />
-          <Route path="/techProductsList" element={<TechProductsList />} />
+          <Route path="/clothesList" element={<ClothesList dataFromParent={this.state.selectedCurrency} />} />
+          <Route path="/techProductsList" element={<TechProductsList dataFromParent={this.state.selectedCurrency} />} />
         </Routes>
       </div>
     );

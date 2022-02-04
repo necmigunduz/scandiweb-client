@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
 import ListItem from "./listItem";
+import SelectCurrency from "./currencySelector/currencySelector";
 
 class TechProductsList extends Component {
   constructor(props) {
@@ -30,13 +31,14 @@ class TechProductsList extends Component {
         <h2 className="category-name">Tech-Products</h2>
         <ul className="product-ul">
           {this.state.products.map((product) => {
+            let currency = SelectCurrency(product, this.props);
             return (
               <ListItem
                 key={product.id}
                 pImg={product.gallery[0]}
                 pName={product.name}
                 pBrand={product.brand}
-                pPrice={product.prices[0].amount}
+                pPrice={currency}
               />
             );
           })}

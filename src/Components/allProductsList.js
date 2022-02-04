@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { PRODUCTS_QUERY } from "../query";
 import ListItem from "./listItem";
+import SelectCurrency from "./currencySelector/currencySelector";
 
 export default class AllProductsList extends Component {
   constructor(props) {
@@ -34,21 +35,8 @@ export default class AllProductsList extends Component {
           <h2 className="category-name">Products</h2>
           <ul className="product-ul">
             {this.state.products.map((product) => {
-              let currency = '';
-              let sc = this.props.dataFromParent
-              if( sc === 'USD'){
-                currency = product.prices[0].amount
-              } else if(sc === 'GBP') {
-                currency = product.prices[1].amount
-              } else if(sc === 'AUD') {
-                currency = product.prices[2].amount
-              } else if(sc === 'RUB') {
-                currency = product.prices[3].amount
-              } else if(sc === 'JPY') {
-                currency = product.prices[4].amount
-              } else {
-                currency = ''
-              }
+              
+              let currency = SelectCurrency(product, this.props);
               return (
                 <ListItem
                   key={product.id}
