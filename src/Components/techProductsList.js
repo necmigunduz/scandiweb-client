@@ -39,6 +39,7 @@ class TechProductsList extends Component {
                 pName={product.name}
                 pBrand={product.brand}
                 pPrice={currency}
+                pId={product.id}
               />
             );
           })}

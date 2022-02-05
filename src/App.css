@@ -90,3 +90,7 @@ option {
 .p-10 {
   padding: 5px;
 }
+
+li {
+  list-style-type: none;
+}
