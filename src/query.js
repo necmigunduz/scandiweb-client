@@ -3,6 +3,7 @@ const PRODUCTS_QUERY = `{
     products {
       id
       name
+      category
       brand
       description
       inStock
