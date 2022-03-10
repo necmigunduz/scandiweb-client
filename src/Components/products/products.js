@@ -35,7 +35,7 @@ export default class AllProductsList extends Component {
             {this.state.products.map((product) => {
               
               let currency = SelectCurrency(product, this.props);
-              console.log(Category(this.props))
+              
               return (
                 <ListItem
                   key={product.id}

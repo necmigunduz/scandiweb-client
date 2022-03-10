@@ -1,9 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
-import TopNav from "./Components/topNav";
-// import ClothesList from "./Components/clothesList";
-// import TechProductsList from "./Components/techProductsList";
+import TopNav from "./Components/topNav/topNav";
 import Products from "./Components/products/products";
 
 class App extends Component {

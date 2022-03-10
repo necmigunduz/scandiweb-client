@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../Assets/logo.png";
-import options from '../Components/filter/options';
+import Logo from "../../Assets/logo.png";
+import options from '../../Components/filter/options';
 
 class TopNav extends Component {
   constructor(props) {
@@ -15,7 +15,6 @@ class TopNav extends Component {
     e.preventDefault();
     let sC = await e.target.value
     this.setState({selectedCurrency: sC});
-    console.log(this.state.selectedCurrency)
     this.props.sendSCToApp(this.state.selectedCurrency);
   }
 
