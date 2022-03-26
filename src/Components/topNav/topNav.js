@@ -43,7 +43,7 @@ class TopNav extends Component {
           <Link to="/clothes" className="top-links" onClick={this.handleClothes}>
             Clothes |
           </Link>
-          <Link to="/techProducts" className="top-links" onClick={this.handleTechs}>
+          <Link to="/electronics" className="top-links" onClick={this.handleTechs}>
             Tech-Products
           </Link>
         </nav>

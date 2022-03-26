@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { PRODUCTS_QUERY } from "../../query";
 
 export default class ProductCard extends Component {
   constructor(props) {
@@ -10,9 +9,6 @@ export default class ProductCard extends Component {
         name: 'Sports Shoes'
       }
     };
-  }
-
-  componentDidMount() {
   }
 
   render() {

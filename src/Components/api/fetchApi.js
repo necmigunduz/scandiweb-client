@@ -1,6 +1,6 @@
 import { PRODUCTS_QUERY } from "../../query";
 
-const FetchApi = async() => {
+const FetchApi = async(type) => {
   let products = await fetch("http://localhost:4000/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -8,7 +8,8 @@ const FetchApi = async() => {
   })
     .then((response) => response.json())
     .catch((error) => console.log(error.message));
-  return products.data.categories;
+  let prdcts = products.data.categories[type].products;
+  return prdcts;
 };
 
 export default FetchApi;

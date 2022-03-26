@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 import TopNav from "./Components/topNav/topNav";
 import AllProductsList from "./Components/products/products";
-import Clothes from "./Components/products/clothes";
-import TechProducts from "./Components/products/techProducts";
 import ProductCard from "./Components/listItem/productCard";
 
 class App extends Component {
@@ -18,40 +16,48 @@ class App extends Component {
 
   getCategoryFromTopNav = (SCAT) => {
     this.setState({
-      selectedCategory: SCAT
-    })
+      selectedCategory: SCAT,
+    });
   };
 
   render() {
     return (
       <div className="App">
-        <TopNav sendSCToApp={this.getCurrencyFromTopNav}  sendSCATToApp={this.getCategoryFromTopNav} />
+        <TopNav
+          sendSCToApp={this.getCurrencyFromTopNav}
+          sendSCATToApp={this.getCategoryFromTopNav}
+        />
         <Routes>
           <Route
             path="/"
-            element={<AllProductsList 
-              dataFromParent={this.state.selectedCurrency} 
-              categoryFromParent={this.state.selectedCategory} 
-            />}
+            element={
+              <AllProductsList
+                dataFromParent={this.state.selectedCurrency}
+                categoryFromParent={this.state.selectedCategory}
+              />
+            }
           />
-          <Route 
-            path="/:id"
-            element={<ProductCard />} 
-          />
+          <Route path="/:id" element={<ProductCard />} />
           <Route
             path="/clothes"
-            element={<Clothes 
-              dataFromParent={this.state.selectedCurrency} 
-              categoryFromParent={this.state.selectedCategory} 
-            />}
+            element={
+              <AllProductsList
+                dataFromParent={this.state.selectedCurrency}
+                categoryFromParent={this.state.selectedCategory}
+              />
+            }
           />
+          <Route path="/clothes/:id" element={<ProductCard />} />
           <Route
-            path="/techProducts"
-            element={<TechProducts 
-              dataFromParent={this.state.selectedCurrency}
-              categoryFromParent={this.state.selectedCategory}
-            />}
+            path="/electronics"
+            element={
+              <AllProductsList
+                dataFromParent={this.state.selectedCurrency}
+                categoryFromParent={this.state.selectedCategory}
+              />
+            }
           />
+          <Route path="/electronics/:id" element={<ProductCard />} />
         </Routes>
       </div>
     );

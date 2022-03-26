@@ -4,20 +4,29 @@ import ListItem from "../../Components/listItem/listItem";
 import SelectCurrency from "../../Components/currencySelector/currencySelector";
 import Category from "../../Components/categorySelector/categorySelector";
 import FetchApi from "../api/fetchApi";
+import Type from "../api/type";
 
 export default class AllProductsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [],
+      products: []
     };
   }
 
   async componentDidMount() {
-    console.log(Category(this.props))
-    let prds = await FetchApi()
+    let prds = await FetchApi(0)
     this.setState({
-      products: prds[0].products
+      products: prds
+    })
+  }
+
+  async componentDidUpdate() {
+    let type = Type(this.props);
+    let prdcts = await FetchApi(type)
+    console.log(typeof(prdcts))
+    this.setState({
+      products: prdcts
     })
   }
 
