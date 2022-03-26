@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import ListItem from "../../Components/listItem/listItem";
-import SelectCurrency from "../../Components/currencySelector/currencySelector";
-import Category from "../../Components/categorySelector/categorySelector";
+import ListItem from "../listItem/listItem";
+import SelectCurrency from "../currencySelector/currencySelector";
+import Category from "../categorySelector/categorySelector";
 import FetchApi from "../api/fetchApi";
 
-export default class AllProductsList extends Component {
+export default class Clothes extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +16,7 @@ export default class AllProductsList extends Component {
     console.log(Category(this.props))
     let prds = await FetchApi()
     this.setState({
-      products: prds[0].products
+      products: prds[1].products
     })
   }
 
@@ -31,17 +30,15 @@ export default class AllProductsList extends Component {
           <ul className="product-ul">
             {this.state.products.map((product) => {
               let currency = SelectCurrency(product, this.props);
-
               return (
-                  <Link to={product.id} key={product.id}>
-                    <ListItem
-                      pId={product.id}
-                      pImg={product.gallery[0]}
-                      pName={product.name}
-                      pBrand={product.brand}
-                      pPrice={currency}
-                    />
-                  </Link>
+                <ListItem
+                  key={product.id}
+                  pImg={product.gallery[0]}
+                  pName={product.name}
+                  pBrand={product.brand}
+                  pPrice={currency}
+                  pId={product.id}
+                />
               );
             })}
           </ul>

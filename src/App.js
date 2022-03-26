@@ -2,7 +2,10 @@ import "./App.css";
 import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 import TopNav from "./Components/topNav/topNav";
-import Products from "./Components/products/products";
+import AllProductsList from "./Components/products/products";
+import Clothes from "./Components/products/clothes";
+import TechProducts from "./Components/products/techProducts";
+import ProductCard from "./Components/listItem/productCard";
 
 class App extends Component {
   state = { selectedCurrency: "", selectedCategory: "" };
@@ -26,15 +29,28 @@ class App extends Component {
         <Routes>
           <Route
             path="/"
-            element={<Products dataFromParent={this.state.selectedCurrency} categoryFromParent={this.state.selectedCategory} />}
+            element={<AllProductsList 
+              dataFromParent={this.state.selectedCurrency} 
+              categoryFromParent={this.state.selectedCategory} 
+            />}
+          />
+          <Route 
+            path="/:id"
+            element={<ProductCard />} 
           />
           <Route
             path="/clothes"
-            element={<Products dataFromParent={this.state.selectedCurrency} categoryFromParent={this.state.selectedCategory} />}
+            element={<Clothes 
+              dataFromParent={this.state.selectedCurrency} 
+              categoryFromParent={this.state.selectedCategory} 
+            />}
           />
           <Route
             path="/techProducts"
-            element={<Products dataFromParent={this.state.selectedCurrency} categoryFromParent={this.state.selectedCategory} />}
+            element={<TechProducts 
+              dataFromParent={this.state.selectedCurrency}
+              categoryFromParent={this.state.selectedCategory}
+            />}
           />
         </Routes>
       </div>

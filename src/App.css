@@ -19,14 +19,14 @@ a:hover {
 
 .product-li {
   list-style-type: none;
-  padding: 10px;
+  padding: 4px;
   margin: 5px;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(216, 230, 235);
   border-radius: 2px;
   background-color: rgb(221, 236, 241);
-  width: 100px;
+  width: 150px;
 }
 
 .product-li:hover {
@@ -41,7 +41,9 @@ a:hover {
 
 .product-ul {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .top-nav {
@@ -77,7 +79,6 @@ option {
   background-color: white;
 }
 
-/* CSS Library */
 .d-flex-column {
   display: flex;
   flex-direction: column;
